@@ -1,7 +1,8 @@
-import { GoogleGenAI, Type, SchemaType } from "@google/genai";
+import { GoogleGenAI, Type } from "@google/genai";
 import { OracleResponse, UserInput } from "../types";
 
 // Initialize Gemini Client
+// configured in vite.config.ts to inject the key
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const generateCareerAdvice = async (input: UserInput): Promise<OracleResponse> => {
